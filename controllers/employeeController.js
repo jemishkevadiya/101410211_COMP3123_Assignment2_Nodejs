@@ -1,6 +1,5 @@
 const Employee = require('../models/employee');
 
-// createEmployee function to create a new employee.
 exports.createEmployee = async (req, res) => {
     const { first_name, last_name, email, position, salary, date_of_joining, department } = req.body;
 
@@ -21,6 +20,7 @@ exports.createEmployee = async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 };
+
 
 // getAllEmployee function to get all informations of employees.
 exports.getAllEmployee = async (req, res) => {
