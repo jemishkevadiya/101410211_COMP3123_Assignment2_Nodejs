@@ -2,7 +2,6 @@ const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-// Helper functions
 const hashPassword = async (password) => {
     return await bcrypt.hash(password, 10);
 };
@@ -13,13 +12,12 @@ const comparePass = async (password, hashedPassword) => {
 
 const generateToken = (email) => {
     return jwt.sign(
-        { email }, // Include email in the token payload
+        { email }, 
         process.env.JWT_SECRET,
         { expiresIn: '1h' }
     );
 };
 
-// Signup function
 exports.signup = async (req, res) => {
     const { username, email, password } = req.body;
     try {
@@ -36,7 +34,6 @@ exports.signup = async (req, res) => {
     }
 };
 
-// Login function
 exports.login = async (req, res) => {
     const { email, password } = req.body;
     try {

@@ -21,8 +21,6 @@ exports.createEmployee = async (req, res) => {
     }
 };
 
-
-// getAllEmployee function to get all informations of employees.
 exports.getAllEmployee = async (req, res) => {
     try {
         const employees = await Employee.find();
@@ -32,7 +30,6 @@ exports.getAllEmployee = async (req, res) => {
     }
 }
 
-// getEmployeeById function to get information of perticular employee.
 exports.getEmployeeById = async (req, res) => {
     const {eid} = req.params;
     try {
@@ -44,7 +41,6 @@ exports.getEmployeeById = async (req, res) => {
     }
 }
 
-// updateEmployee function to update some informations of employee.
 exports.updateEmployee = async (req, res) => {
     const {eid} = req.params;
     const updates = req.body;
@@ -58,7 +54,6 @@ exports.updateEmployee = async (req, res) => {
     }
 }
 
-// deleteEmployee function to delete employee by their ID.
 exports.deleteEmployee = async (req, res) => {
     const {eid} = req.params;
 
