@@ -3,9 +3,9 @@ const express = require('express')
 // Imported mongoose library.
 const mongoose = require('mongoose')
 // Importing userRoutes from routes/users
-const userRoutes = require('../routes/users_routes');
+const userRoutes = require('./routes/users_routes');
 // Importing employeeRoutes from routes/employees
-const employeeRoutes = require('../routes/employees_routes');
+const employeeRoutes = require('./routes/employees_routes');
 const cors = require('cors');
 
 // loading .env file to get URI of batabase.
