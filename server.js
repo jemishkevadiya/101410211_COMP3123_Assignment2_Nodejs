@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use(
     cors({
-      origin: 'http://localhost:3001', 
+      origin: ['http://localhost:3001', 'https://101410211-comp-3123-assignment2-reactjs.vercel.app'], 
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
       allowedHeaders: ['Content-Type', 'Authorization'],
     })
